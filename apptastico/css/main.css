@@ -127,7 +127,7 @@ h4 {
 }
 
 .container {
-    width: 978px;
+    max-width: 978px;
     margin: 0 auto;
     /*height: 100vh;*/
     /*background: red;*/
@@ -136,34 +136,24 @@ h4 {
 /* GRID */
 
 .grid-3 {
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 
 .grid-3 .col {
-    margin-right: 30px;
-    width: 306px; /* base width / 3 */
+    width: 32%; /* base width / 3 */
     
     background: white;
-    float: left;
-}
-
-.grid-3 .col:last-of-type {
-    margin-right: 0px;
 }
 
 .grid-4 {
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .grid-4 .col {
-    margin-right: 30px;
-    width: 222px; /* base width / 4 */
-    float: left;
-}
-
-.grid-4 .col:last-of-type {
-    margin-right: 0px;
-
+    width: 24.5%; /* base width / 4 */
 }
 
 
@@ -326,22 +316,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#429cd4', end
 }
 
 .sponsor-list {
+    display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
-    padding-left: 0px;
 }
 
 .sponsor {
-    margin-right: 148px;
     line-height: 70px;
     list-style: none;
     display: inline-block;
     opacity: 0.4;
 }
 
-.sponsor:last-of-type {
-    margin-right: 0px;
-}
 
 .sponsor img {
     text-align: center;
@@ -406,11 +393,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#429cd4', end
     top: 75px;
 }
 
+@media screen and (max-width: 1173px){
+    .btn-slide-right{
+        display: none;
+    }
+
+    .btn-slide-left{
+        display: none;
+    }
+}
+
 /*SOCIAL*/
 
 section.social {
     background: white;
-    padding-top: 120px;
+    padding-top: 50px;
     overflow: hidden;
     padding-bottom: 80px;
 }
@@ -479,6 +476,12 @@ li.blog-item img {
     list-style: none;
 }
 
+@media screen and (max-width: 890px){
+    .twitter{
+        float: none;
+    }
+}
+
 
 /* FOOTER*/
 
@@ -521,6 +524,18 @@ footer p {
     height: 25px;
     width: 25px;
 
+}
+
+@media screen and (max-width: 890px){
+    .img-phone{
+        display: none;
+
+    }
+
+    .banner-caption{
+        float: none;
+        margin: 0 auto;
+    }
 }
 
 /* ==========================================================================
